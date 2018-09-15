@@ -1,0 +1,112 @@
+Documento de Requisitos: Sistema de Pedidos Eletrônico
+para Restaurantes com Controle de Fluxos de Produção e Programa de Fidelidade
+1 Introdução
+1.1 Propósito
+O propósito deste documento de especificação de requisitos é definir todos
+os requisitos do Sistema de Pedidos Eletrônico para Restaurantes com Controle
+de Fluxos de Produção e Programa de Fidelidade, sistema que tem como objetivo
+principal gerenciar pedidos, controlar o fluxo de produção e informar os itens sendo
+produzidos aos clientes, bem como oferecer bonificações aos clientes baseado no
+histórico de compras.
+
+1.2 Escopo
+O sistema recebe os pedidos através de um atendente e os envia para a
+unidade produção, onde entram para o fluxo de produção de três estágios, sendo eles
+aguardando, em produção e pronto, sendo que tais informações são compartilhadas
+com os clientes.
+
+1.3 Organização da Especificação de Requisitos de Software
+Este documento está dividido em três seções. Na primeira seção, é apresentada
+uma breve introdução sobre o conteúdo deste documento. Na segunda seção, uma
+descrição geral do sistema é apresentada e na última seção são descritos, de forma
+detalhada, todos os requisitos funcionais e não-funcionais do sistema.
+
+2 Descrição Geral do Sistema
+O objetivo do sistema é receber os pedidos dos clientes através de um dispositivo móvel portado pelo atendente, o pedido é então analisado e enviado a unidade
+de produção, caso haja a falta de algum ingrediente para o preparo, o sistema deverá
+informar que o mesmo não pode ser pode ser produzido.
+Após a aceitação do pedido, este é recebido na unidade de produção através
+do controle de fluxo de produção e entra para o estágio aguardando, assim que
+sua produção for iniciada, sua situação deve ser alterada para em produção e após
+finalizado para pronto. Tais informações também estarão disponíveis aos clientes
+por meio de um dispositivo de exibição. Uma cópia do pedido é impressa e entregue
+ao cliente e será utilizada para encerrar o processo.
+O pedido é finalizado quando o cliente efetua o seu pagamento, a identificação
+é realizada pelo número do pedido contido na cópia entregue a ele ou pelo número
+
+da mesa que estava ocupando, o cliente é identificado pelo seu número do CPF
+(Cadastro de Pessoas Físicas) e o pedido é salvo no histórico de compras. O histórico
+de compras visa oferecer bonificações baseadas nas regras de negócio.
+
+2.1 Funções do Produto
+O sistema apresenta como principal objetivo gerenciar o ciclo de produção
+em um restaurante, desde a realização até o pagamento do pedido, realizando as
+seguintes funções:
+
+• Inclusão, alteração, exclusão e consulta de ingredientes;
+• Inclusão, alteração, exclusão e consulta de produtos;
+• Inclusão, alteração e consulta de pedidos;
+• Inclusão e consulta de clientes;
+• Emissão do histórico de compras por cliente;
+
+2.2 Características do Usuário
+O sistema é destinado a três grupos de usuários, sendo eles: atendentes,
+cozinheiros e caixa. Sendo necessário ter uma noção básica sobre computadores.
+
+2.3 Suposições e Dependências
+A configuração mínima requerida para a execução do sistema é composta por
+dispositivos móveis portadores de android, dois microcomputadores, sendo um com
+tela sensível ao toque e o outro hospedando o sistema, por fim, uma televisão para
+exibir o estado dos pedidos.
+
+3 Requisitos Específicos
+3.1 Requisitos Funcionais
+Cadastro de Ingredientes
+RF1. O sistema deve permitir a inclusão, alteração e remoção de ingredientes no
+sistema. Os dados de ingredientes consistem de: nome, preço, fornecedor,
+contato do fornecedor e quantidade em estoque.
+RF2. O sistema deve permitir o cadastro de apenas um ingrediente por nome.
+RF3. O sistema deve permitir apenas ao administrador incluir, alterar ou remover
+ingredientes.
+
+Cadastro de Produtos
+RF4. O sistema deve permitir a inclusão, alteração e remoção de produtos no
+sistema. Os dados de produtos consistem de: número de identificação único,
+nome, preço, ingredientes e categoria.
+RF5. O sistema deve permitir a alteração dos dados do produto, exceto o número
+de identificação único.
+RF6. O sistema deve emitir mensagens de erro caso um produto seja adicionado
+aos pedidos e algum ingrediente esteja indisponível no estoque.
+
+Cadastro de Pedidos
+RF7. O sistema deve permitir a inclusão e alteração dos pedidos. Os dados de
+pedido consistem de: número do pedido, produtos, valor total, identificação do
+cliente, data do pedido e estado do pedido.
+RF8. O sistema deve permitir a alteração dos dados do pedido, exceto o número do
+pedido, a identificação do cliente e a data do pedido.
+RF9. O sistema deve permitir a alteração do campo estado do pedido para: realizado,
+aprovado, aguardando, em produção, pronto e finalizado.
+
+Cadastro de Clientes
+RF10. O sistema deve permitir a inclusão de clientes. Os dados de clientes consistem
+de: CPF, nome do cliente e pontos acumulados.
+RF11. O sistema deve permitir o cadastro de apenas um cliente por CPF.
+
+Informações do Programa de Fidelidade
+RF12. O sistema deve permitir que um pedido esteja vinculado a apenas um cliente.
+RF13. O sistema deve permitir que apenas pedidos com o estado de finalizados
+sejam vinculados aos pontos acumulados do cliente.
+
+Relatórios
+RF14. O sistema deve gerar relatórios de todos os pedidos realizados por cliente,
+data ou produto.
+RF15. O sistema deve gerar relatórios da quantidade de ingredientes em estoque.
+
+3.2 Requisitos Não-Funcionais
+RN1. O sistema é composto por três (3) subsistemas, sendo eles: sistema para
+atendimento, sistema para fluxo de produção e sistema para caixa.
+RN2. O sistema deve ser capaz de realizar cópias de segurança de todos os dados
+do sistema.
+RN3. O sistema deve ser facilmente portável para os ambientes Linux e Windows.
+
+
