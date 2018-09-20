@@ -1,0 +1,17 @@
+sistema de pedidos eletronico
+
+o cliente escolhe o conteudo do pedido atravez de um menu impresso;
+o cliente informa o numero/nome do produto ao atendente;
+o atendente realiza os pedidos atravez de um dispositivel movel;
+o pedido e enviado ao servidor;
+o servidor notifica o caixa que imprime o pedido;
+o pedido e processado e entregue ao cliente;
+o sistema notifica ao caixa que o pedido foi entregue
+o cliente realiza o pagamento do pedido atravez do numero do pedido; (pode ser por numero da mesa)
+
+cadastros:
+ingredientes, produtos, mesas, funcionarios, pedidos, caixa, 
+
+funcionalidades extras:
+programa de fidelidade
+kanban
