@@ -3,47 +3,40 @@
 \usepackage{lmodern}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage{nomencl}
+\usepackage{lastpage}
+\usepackage{indentfirst}
 \usepackage{color}
 \usepackage{graphicx}
-\usepackage{indentfirst}
 \usepackage{microtype}
-\usepackage{morefloats}
 
-\usepackage[brazil]{babel}
-\addto\captionsbrazil{
-    \renewcommand{\bibname}{Refer\^encias}
-    \renewcommand{\indexname}{\'Indice}
-    \renewcommand{\listfigurename}{Lista de ilustra\c{c}\~{o}es}
-    \renewcommand{\listtablename}{Lista de tabelas}
-    \renewcommand{\pageautorefname}{p\'agina}
-    \renewcommand{\sectionautorefname}{se{\c c}\~ao}
-    \renewcommand{\subsectionautorefname}{subse{\c c}\~ao}
-    \renewcommand{\paragraphautorefname}{par\'agrafo}
-    \renewcommand{\subsubsectionautorefname}{subse{\c c}\~ao}
-    \renewcommand{\paragraphautorefname}{subse{\c c}\~ao}
+\definecolor{blue}{RGB}{41,5,195}
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=blue,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
 }
 
-\usepackage{color}
-\definecolor{thered}{rgb}{0.65,0.04,0.07}
-\definecolor{thegreen}{rgb}{0.06,0.44,0.08}
-\definecolor{thegrey}{gray}{0.5}
-\definecolor{theshade}{rgb}{1,1,0.97}
-\definecolor{theframe}{gray}{0.6}
-\definecolor{blue}{RGB}{41,5,195}
-
-\setlrmarginsandblock{3cm}{3cm}{*}
-\setulmarginsandblock{3cm}{3cm}{*}
-\checkandfixthelayout
-
 \setlength{\parindent}{1.3cm}
-
-\setlength{\parskip}{\onelineskip} 
-
-\SingleSpacing
-
+\setlength{\parskip}{0.2cm}
+\makeindex
 
 \begin{document}
+\selectlanguage{brazil}
+\frenchspacing
+
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+
  \section*{\textbf{Documento de Requisitos:} Sistema de Pedidos Eletrônico para Restaurantes com Controle de Fluxos de Produção e Programa de Fidelidade}
  \section{Introdução}
  
@@ -130,6 +123,10 @@
   \item [RN3.] O sistema deve ser facilmente portável para os ambientes Linux e Windows.
  \end{description}
 
+\begin{figure}[!htb]
+ \centering
+ \includegraphics[scale=0.55]{images/imagem01.png}
+\end{figure}
 
  
 \end{document}
