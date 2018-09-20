@@ -8,6 +8,8 @@
 \usepackage{color}
 \usepackage{graphicx}
 \usepackage{microtype}
+\usepackage{tabularx}
+\usepackage{booktabs}
 
 \definecolor{blue}{RGB}{41,5,195}
 \hypersetup{
@@ -123,10 +125,23 @@
   \item [RN3.] O sistema deve ser facilmente portável para os ambientes Linux e Windows.
  \end{description}
 
-\begin{figure}[!htb]
+\begin{figure}[h]
  \centering
- \includegraphics[scale=0.55]{images/imagem01.png}
+ \includegraphics[scale=0.5]{images/imagem01.png}
 \end{figure}
 
- 
+\begin{center}
+ \begin{tabularx}{\textwidth}{lX}\specialrule{1.2pt}{1pt}{1pt}
+  \textbf{Caso de Uso:} & Efetuar Pedido\\ \hline
+  \textbf{Visão Geral:} & O cliente realiza o pedido dos itens desejados ao atendente, os itens são validados pelo sistema e o pedido é registrado. Após o registro, uma cópia do pedido é impressa e entregue ao cliente pelo atendente. O sistema envia o pedido à cozinha onde tem o seu estado atualizado de acordo com o fluxo de produção. Quando finalizado, o produto é entregue ao cliente pelo atendente e o sistema atualiza o estoque baseado nos itens do pedido.\\ \specialrule{1.2pt}{1pt}{1pt}
+ \end{tabularx}
+\end{center}
+
+\begin{center}
+ \begin{tabularx}{\textwidth}{lX}\specialrule{1.2pt}{1pt}{1pt}
+  \textbf{Caso de Uso:} & Finalizar Pedido\\ \hline
+  \textbf{Visão Geral:} & O cliente dirige-se ao caixa, apresenta o pedido e efetua o pagamento.  \\ \specialrule{1.2pt}{1pt}{1pt}
+ \end{tabularx}
+\end{center}
+
 \end{document}
