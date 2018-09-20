@@ -151,4 +151,28 @@
  \end{tabularx}
 \end{center}
 
+\begin{center}
+ \begin{tabularx}{\textwidth}{lX}\specialrule{1.2pt}{1pt}{1pt}
+  \textbf{Descrição:} & Este caso de uso detalha como é realizada a inclusão de um pedido realizado pelo cliente no sistema.\\ \hline
+  \textbf{Atores:} &  Cliente, Atendente, Impressora.\\ \hline
+  \textbf{Inclusões:} & Imprimir Pedido.\\ \hline
+  \textbf{Extensões:} & Alterar Pedido.\\ \hline
+  \textbf{Pré-condições:} & Nenhuma. \\ \hline
+  \textbf{Detalhes:} & \begin{enumerate}[wide, labelwidth=!, noitemsep]
+                           \item O cliente escolhe os itens do seu pedido.
+                           \item O atendente registra o pedido de um cliente.
+                           \item O sistema registra o pedido no SGDB.
+                           \item A impressora imprime a via do cliente do pedido.
+                           \item O atendente entrega a impressão ao cliente.
+                          \end{enumerate}
+\\ \hline
+  \textbf{Pós-condições:} & O pedido estará registrado no sistema e com estado de aguardando\\ \hline
+  \textbf{Exceções:} & \\ \hline
+  \textbf{Restrições:} & \\ \hline
+  \textbf{Variantes:} & \\ \hline
+  \textbf{Comentários:} &  \\ \specialrule{1.3pt}{1pt}{1pt}
+ \end{tabularx}
+\end{center}
+
+
 \end{document}
